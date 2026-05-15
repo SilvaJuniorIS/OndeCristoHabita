@@ -327,6 +327,113 @@
       color: var(--muted);
     }
 
+    .publication-layout {
+      display: grid;
+      grid-template-columns: minmax(230px, 0.34fr) 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-top: 22px;
+    }
+
+    .publication-guide {
+      position: sticky;
+      top: 102px;
+      padding: 22px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 16px 44px rgba(30, 58, 95, 0.08);
+    }
+
+    .publication-guide h3,
+    .publication-list h3 {
+      margin: 0 0 12px;
+      font-size: 1.12rem;
+    }
+
+    .publication-guide p,
+    .publication-list p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .guide-links {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .guide-links a {
+      display: block;
+      padding: 10px 12px;
+      border-left: 3px solid var(--gold);
+      border-radius: 6px;
+      background: rgba(245, 233, 218, 0.62);
+      color: var(--blue);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .publication-item {
+      display: grid;
+      grid-template-columns: 126px 1fr;
+      gap: 18px;
+      padding: 16px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 16px 44px rgba(30, 58, 95, 0.08);
+    }
+
+    .publication-date {
+      display: grid;
+      place-items: center;
+      min-height: 118px;
+      border-radius: 6px;
+      background:
+        linear-gradient(145deg, rgba(30, 58, 95, 0.96), rgba(30, 58, 95, 0.76)),
+        radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.5), transparent 5rem);
+      color: var(--white);
+      text-align: center;
+      font-weight: 800;
+    }
+
+    .publication-date span {
+      display: block;
+      font-family: "Cinzel", Georgia, serif;
+      font-size: 2.15rem;
+      line-height: 1;
+    }
+
+    .publication-date small {
+      display: block;
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .publication-item h3 {
+      margin: 0 0 8px;
+      font-size: 1.22rem;
+    }
+
+    .publication-item p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+
+    .publication-item a {
+      color: var(--blue);
+      font-weight: 800;
+      border-bottom: 2px solid rgba(212, 175, 55, 0.55);
+    }
+
     .message-panel {
       padding: 32px;
       display: grid;
@@ -468,6 +575,15 @@
         grid-template-columns: 1fr;
       }
 
+      .publication-layout,
+      .publication-item {
+        grid-template-columns: 1fr;
+      }
+
+      .publication-guide {
+        position: static;
+      }
+
       .final-invite {
         align-items: flex-start;
         flex-direction: column;
@@ -499,6 +615,7 @@
         <div class="nav-links">
           <a href="#sobre">Sobre</a>
           <a href="#vem-e-segue">Vem, e Segue-Me</a>
+          <a href="#publicacoes">Publicacoes</a>
           <a href="#familia">Familia</a>
           <a href="#templo">Templo</a>
           <a href="#estudos">Estudos</a>
@@ -574,6 +691,41 @@
             <p>Mensagens sobre reverencia, preparacao espiritual e a paz que vem dos convenios.</p>
           </div>
         </article>
+      </div>
+      <div class="publication-layout" id="publicacoes">
+        <aside class="publication-guide" aria-label="Guia lateral de publicacoes">
+          <h3>Guia de publicacoes</h3>
+          <p>Acompanhe as reflexoes semanais. Novas paginas podem ser acrescentadas aqui a cada semana.</p>
+          <div class="guide-links">
+            <a href="pagina-vem-e-segue-me-2026-05-15.html">15 mai - Nao te esquecas do Senhor</a>
+            <a href="pagina-vem-e-segue-me-2026-05-18.html">18 mai - Se forte e corajoso</a>
+          </div>
+        </aside>
+
+        <div class="publication-list">
+          <!--
+            ATUALIZACAO RAPIDA:
+            1. Copie um bloco <article class="publication-item">.
+            2. Troque data, titulo, resumo e link do arquivo HTML.
+            3. Rode: git add . && git commit -m "adiciona publicacao semanal" && git push
+          -->
+          <article class="publication-item">
+            <div class="publication-date"><div><span>15</span><small>maio 2026</small></div></div>
+            <div>
+              <h3>Guarda-te, que nao te esquecas do Senhor</h3>
+              <p>Uma reflexao em Deuteronomio para lembrar, amar, repartir e escolher a vida com Cristo no centro do coracao.</p>
+              <a href="pagina-vem-e-segue-me-2026-05-15.html">Abrir publicacao</a>
+            </div>
+          </article>
+          <article class="publication-item">
+            <div class="publication-date"><div><span>18</span><small>maio 2026</small></div></div>
+            <div>
+              <h3>Se forte e corajoso</h3>
+              <p>Josue nos convida a atravessar rios, derrubar muralhas interiores e escolher servir ao Senhor com coragem tranquila.</p>
+              <a href="pagina-vem-e-segue-me-2026-05-18.html">Abrir publicacao</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 

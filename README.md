@@ -6,3 +6,5 @@ Arquivos principais:
 
 - `index.html` - pagina inicial principal.
 - `onde-cristo-habita-index.html` - copia descritiva da mesma pagina.
+- `GUIA_ATUALIZACAO.md` - passo a passo para adicionar novas publicacoes.
+- `pagina-vem-e-segue-me-2026-*.html` - publicacoes semanais do Vem, e Segue-Me.
