@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onde Cristo Habita | Santos dos Ultimos Dias</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d4af37;
+      --blue: #1e3a5f;
+      --white: #ffffff;
+      --beige: #f5e9da;
+      --olive: #6b7d5c;
+      --ink: #182a3d;
+      --muted: #617081;
+      --paper: rgba(255, 255, 255, 0.86);
+      --line: rgba(30, 58, 95, 0.14);
+      --shadow: 0 22px 60px rgba(30, 58, 95, 0.14);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Montserrat", Arial, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(212, 175, 55, 0.2), transparent 30rem),
+        radial-gradient(circle at 90% 4%, rgba(107, 125, 92, 0.18), transparent 28rem),
+        linear-gradient(135deg, #ffffff 0%, #f5e9da 46%, #e7efe6 100%);
+      line-height: 1.65;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    img { max-width: 100%; display: block; }
+
+    .site-shell {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      min-width: 270px;
+    }
+
+    .brand-mark {
+      position: relative;
+      width: 46px;
+      height: 46px;
+      border: 2px solid var(--blue);
+      border-radius: 8px;
+      background: linear-gradient(145deg, #ffffff, #f5e9da);
+      box-shadow: 0 10px 24px rgba(30, 58, 95, 0.13);
+    }
+
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 14px;
+      width: 22px;
+      height: 18px;
+      border: 2px solid var(--gold);
+      border-top: 0;
+      border-radius: 0 0 5px 5px;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 16px;
+      width: 8px;
+      height: 18px;
+      background:
+        linear-gradient(var(--blue), var(--blue)) center 0 / 2px 18px no-repeat,
+        linear-gradient(var(--blue), var(--blue)) center 6px / 8px 2px no-repeat;
+      filter: drop-shadow(0 0 7px rgba(212, 175, 55, 0.55));
+    }
+
+    .brand-name { display: grid; gap: 1px; }
+
+    .brand-name strong {
+      font-family: "Cinzel", Georgia, serif;
+      color: var(--blue);
+      font-size: 1.06rem;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .brand-name span {
+      color: var(--olive);
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: #344b63;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .nav-links a {
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--gold);
+      color: var(--blue);
+    }
+
+    .hero {
+      min-height: calc(100vh - 78px);
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: center;
+      gap: 38px;
+      padding: 50px 0 42px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--olive);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      font-family: "Cinzel", Georgia, serif;
+      color: var(--blue);
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.55rem, 6vw, 5.45rem);
+      line-height: 0.99;
+      max-width: 680px;
+    }
+
+    .lead {
+      max-width: 650px;
+      margin: 22px 0 0;
+      color: #46596c;
+      font-size: clamp(1.04rem, 2vw, 1.22rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 20px;
+      border-radius: 6px;
+      font-weight: 800;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(30, 58, 95, 0.22);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.68);
+      border-color: rgba(30, 58, 95, 0.24);
+      color: var(--blue);
+    }
+
+    .hero-photo {
+      min-height: 560px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      background:
+        linear-gradient(90deg, rgba(30, 58, 95, 0.74), rgba(30, 58, 95, 0.12)),
+        url("https://www.churchofjesuschrist.org/imgs/c9ab2ffaf0b811eba1deeeeeac1e56951f5d4530/full/3840%2C/0/default") center/cover;
+    }
+
+    .hero-photo-note {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 28px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--gold);
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.84);
+      color: #344b63;
+      font-weight: 700;
+    }
+
+    .section { padding: 54px 0; }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.08;
+    }
+
+    .section-head p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .card,
+    .feature,
+    .message-panel,
+    .final-invite {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 16px 44px rgba(30, 58, 95, 0.08);
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      overflow: hidden;
+    }
+
+    .feature-image {
+      min-height: 390px;
+      background:
+        linear-gradient(180deg, rgba(30, 58, 95, 0.08), rgba(30, 58, 95, 0.38)),
+        url("https://www.churchofjesuschrist.org/imgs/96cc930d4143170325eec479f8b09079fe6d881b/full/3840%2C/0/default") center/cover;
+    }
+
+    .feature-body { padding: 34px; }
+
+    .feature-body p {
+      margin: 0;
+      color: #46596c;
+    }
+
+    .feature-body p + p { margin-top: 16px; }
+
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .pill {
+      border: 1px solid rgba(107, 125, 92, 0.28);
+      background: rgba(255, 255, 255, 0.7);
+      color: #3f594b;
+      border-radius: 999px;
+      padding: 8px 13px;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card { overflow: hidden; }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+
+    .card-content { padding: 22px; }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.24rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .message-panel {
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .message-panel h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2.7rem);
+    }
+
+    .message-panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .editorial {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .line-item {
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .line-item h3 {
+      margin: 0 0 6px;
+      font-size: 1.12rem;
+    }
+
+    .line-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .temple-band {
+      min-height: 410px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      background:
+        linear-gradient(90deg, rgba(30, 58, 95, 0.84), rgba(30, 58, 95, 0.28)),
+        url("https://www.churchofjesuschrist.org/imgs/babb14dad30611ecafedeeeeac1ebc39ad94142b/full/800%2C/0/default") center/cover;
+      box-shadow: var(--shadow);
+    }
+
+    .temple-copy {
+      max-width: 640px;
+      padding: 44px;
+      color: var(--white);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .temple-copy h2 {
+      color: var(--white);
+      margin: 0 0 12px;
+      font-size: clamp(1.9rem, 4vw, 3.2rem);
+    }
+
+    .temple-copy p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .final-invite {
+      padding: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background:
+        linear-gradient(90deg, rgba(30, 58, 95, 0.96), rgba(30, 58, 95, 0.84)),
+        radial-gradient(circle at 78% 20%, rgba(212, 175, 55, 0.45), transparent 16rem);
+      color: var(--white);
+    }
+
+    .final-invite h2 {
+      color: var(--white);
+      margin: 0 0 8px;
+    }
+
+    .final-invite p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.84);
+      max-width: 670px;
+    }
+
+    .footer {
+      padding: 34px 0;
+      color: #506274;
+      font-size: 0.9rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .notice {
+      flex-basis: 100%;
+      color: #6a7784;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px 0;
+      }
+
+      .nav-links { justify-content: flex-start; }
+
+      .hero,
+      .feature,
+      .message-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 0;
+        padding-top: 36px;
+      }
+
+      .hero-photo { min-height: 430px; }
+
+      .cards,
+      .editorial {
+        grid-template-columns: 1fr;
+      }
+
+      .final-invite {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .site-shell { padding: 0 16px; }
+      .brand { min-width: 0; }
+      .nav-links { gap: 10px 14px; font-size: 0.84rem; }
+      .hero-photo { min-height: 360px; }
+      .hero-photo-note { left: 18px; right: 18px; bottom: 18px; }
+      .feature-body, .message-panel, .final-invite { padding: 24px; }
+      .temple-copy { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="site-shell">
+      <nav class="nav" aria-label="Navegacao principal">
+        <a class="brand" href="#inicio" aria-label="Onde Cristo Habita">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">
+            <strong>Onde Cristo Habita</strong>
+            <span>Onde a fe encontra morada</span>
+          </span>
+        </a>
+        <div class="nav-links">
+          <a href="#sobre">Sobre</a>
+          <a href="#vem-e-segue">Vem, e Segue-Me</a>
+          <a href="#familia">Familia</a>
+          <a href="#templo">Templo</a>
+          <a href="#estudos">Estudos</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="site-shell hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Blog de inspiracao para Santos dos Ultimos Dias</p>
+        <h1>Onde Cristo habita, a vida encontra direcao.</h1>
+        <p class="lead">Um espaco reverente para devocionais, Vem, e Segue-Me, estudo das escrituras, familia, templo e servico. Conteudo simples para convidar Jesus Cristo a permanecer no lar, no coracao e nas escolhas diarias.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#vem-e-segue">Ler Vem, e Segue-Me</a>
+          <a class="btn btn-secondary" href="#sobre">Conhecer a proposta</a>
+        </div>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Jesus Cristo ensinando os nefitas">
+        <div class="hero-photo-note">"Vinde a mim" e o convite que transforma casa, rotina e coracao em lugar santo.</div>
+      </div>
+    </section>
+
+    <section class="site-shell section" id="sobre">
+      <div class="feature">
+        <div class="feature-image" role="img" aria-label="Familia estudando as escrituras em casa"></div>
+        <div class="feature-body">
+          <p class="eyebrow">Essencia</p>
+          <h2>Um lar para Cristo em cada coracao.</h2>
+          <p><strong>Proposito:</strong> inspirar pessoas a cultivarem uma relacao diaria e viva com Cristo dentro do lar, do coracao e da rotina.</p>
+          <p><strong>Missao:</strong> levar mensagens de fe, esperanca e transformacao espiritual para o dia a dia.</p>
+          <p><strong>Visao:</strong> ser um espaco digital de acolhimento, aprendizado e fortalecimento espiritual.</p>
+          <div class="values" aria-label="Valores">
+            <span class="pill">Fe em Cristo</span>
+            <span class="pill">Amor</span>
+            <span class="pill">Esperanca</span>
+            <span class="pill">Familia</span>
+            <span class="pill">Servico</span>
+            <span class="pill">Disciplina espiritual</span>
+            <span class="pill">Reverencia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-shell section" id="vem-e-segue">
+      <div class="section-head">
+        <p class="eyebrow">Vem, e Segue-Me</p>
+        <h2>Estudo semanal com aplicacao para o lar.</h2>
+        <p>Reflexoes inspiradas nas aulas da semana, com perguntas para ponderar, convites praticos e mensagens para fortalecer a fe em Jesus Cristo.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="https://www.churchofjesuschrist.org/imgs/96cc930d4143170325eec479f8b09079fe6d881b/full/3840%2C/0/default" alt="Familia estudando as escrituras">
+          <div class="card-content">
+            <h3>Fe diaria</h3>
+            <p>Devocionais breves para transformar escritura, oracao e gratidao em ritmo espiritual.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://www.churchofjesuschrist.org/imgs/c9aa41a560fefcdaaefbd8c51eb4c49d8f622deb/full/1920%2C/0/default" alt="Jesus Cristo curando e abencoando pessoas">
+          <div class="card-content">
+            <h3>Cristo no lar</h3>
+            <p>Ideias para aproximar familia, conversas e decisoes do evangelho restaurado de Jesus Cristo.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://www.churchofjesuschrist.org/imgs/babb14dad30611ecafedeeeeac1ebc39ad94142b/full/800%2C/0/default" alt="Templo do Rio de Janeiro Brasil">
+          <div class="card-content">
+            <h3>Convenios e templo</h3>
+            <p>Mensagens sobre reverencia, preparacao espiritual e a paz que vem dos convenios.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="site-shell section" id="familia">
+      <div class="message-panel">
+        <div>
+          <p class="eyebrow">Posicionamento</p>
+          <h2>A fe deixa de ser apenas discurso e passa a habitar a vida.</h2>
+        </div>
+        <p>"Onde Cristo Habita" fala de vivencia pratica do evangelho: estudo em familia, ministracao, arrependimento, servico, testemunho, escolhas santas e pequenas atitudes que convidam o Salvador a permanecer conosco.</p>
+      </div>
+    </section>
+
+    <section class="site-shell section" id="estudos">
+      <div class="section-head">
+        <p class="eyebrow">Linhas editoriais</p>
+        <h2>Conteudo para a casa, a alma e a caminhada.</h2>
+      </div>
+      <div class="editorial">
+        <div>
+          <div class="line-item"><h3>Vem, e Segue-Me</h3><p>Temas semanais com reflexao autoral e aplicacao pessoal.</p></div>
+          <div class="line-item"><h3>Familia</h3><p>Praticas simples para convidar Cristo ao lar e as relacoes.</p></div>
+          <div class="line-item"><h3>Oracao</h3><p>Escuta, gratidao, arrependimento, consolo e confianca.</p></div>
+        </div>
+        <div>
+          <div class="line-item"><h3>Escrituras</h3><p>Estudos claros, perguntas de ponderacao e mensagens inspiradoras.</p></div>
+          <div class="line-item"><h3>Servico</h3><p>Convites para transformar amor em cuidado concreto.</p></div>
+          <div class="line-item"><h3>Testemunhos</h3><p>Historias reais de fe, mudanca e esperanca.</p></div>
+        </div>
+        <div>
+          <div class="line-item"><h3>Juventude</h3><p>Fe no mundo moderno, escolhas, identidade e coragem espiritual.</p></div>
+          <div class="line-item"><h3>Templo</h3><p>Convenios, reverencia e preparacao espiritual.</p></div>
+          <div class="line-item"><h3>Livro de Mormon</h3><p>Reflexoes centradas em Cristo e no evangelho restaurado.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-shell section" id="templo">
+      <div class="temple-band" role="img" aria-label="Templo do Rio de Janeiro Brasil">
+        <div class="temple-copy">
+          <h2>Uma fe com raizes no lar e olhos no templo.</h2>
+          <p>O blog nasce para fortalecer discipulos de Jesus Cristo em uma rotina de escrituras, oracao, servico, ministracao e preparacao para viver convenios com mais reverencia.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-shell section">
+      <div class="final-invite">
+        <div>
+          <h2>Entre, sente-se, vamos falar de Cristo.</h2>
+          <p>Este sera um lugar de mensagens acolhedoras, profundas e simples, para quem deseja deixar Jesus Cristo habitar nao so nas crencas, mas tambem nas escolhas de cada dia.</p>
+        </div>
+        <a class="btn btn-secondary" href="#contato">Acompanhar o blog</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contato">
+    <div class="site-shell footer-inner">
+      <span>Onde Cristo Habita - Onde a fe encontra morada</span>
+      <span>@ondecristohabita - ondecristohabita.com.br</span>
+      <span class="notice">Projeto independente de inspiracao crista. Imagens referenciadas da biblioteca de midia de ChurchofJesusChrist.org.</span>
+    </div>
+  </footer>
+</body>
+</html>
